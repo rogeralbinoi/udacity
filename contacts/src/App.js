@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ListContacts from './ListContacts'
-import  {getAll} from './utils/ContactsAPI'
+import * as ContactsAPI from './utils/ContactsAPI'
 
 class App extends Component {
   state = {
@@ -15,7 +15,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    getAll().then((data) => {
+    ContactsAPI.getAll().then((data) => {
       this.setState({contacts: data})
     })
   }

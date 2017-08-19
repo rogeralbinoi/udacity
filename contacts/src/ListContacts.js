@@ -50,7 +50,7 @@ class ListContacts extends Component {
                            onChange={e => this.updateQuery(e.target.value)} />
                 </div>
 
-                { showingContacts.length !== contacts.legth
+                { showingContacts.length !== contacts.length
                     && (
                         <div className="showing-contacts">
                             <span>Now showing {showingContacts.length} of {contacts.length} total </span>
@@ -58,6 +58,7 @@ class ListContacts extends Component {
                         </div>
                     )
                 }
+                
                 <ol className="contact-list">
                     {showingContacts.map( contact => (
                         <ContactListItem key={contact.id} contact={contact} removeContact={removeContact} />

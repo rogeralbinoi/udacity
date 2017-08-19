@@ -14,8 +14,10 @@ class ListContacts extends Component {
         query: ''
     }
 
-    updateQuery = query => {
-        this.setState({ query: query.trim() })
+    updateQuery = query => { 
+        this.setState({
+            query: query.charAt(query.length-1) === ' ' ? query.trim() + ' ' : query.trim()
+        })
     }
 
     clearQuery = () => {
@@ -48,7 +50,7 @@ class ListContacts extends Component {
                            onChange={e => this.updateQuery(e.target.value)} />
                 </div>
 
-                { showingContacts.length !== contacts.length
+                { showingContacts.length !== contacts.legth
                     && (
                         <div className="showing-contacts">
                             <span>Now showing {showingContacts.length} of {contacts.length} total </span>

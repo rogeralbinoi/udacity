@@ -20,6 +20,12 @@ class App extends Component {
         "name": "Tyler McGinnis",
         "email": "tyler@reacttraining.com",
         "avatarURL": "http://localhost:5001/tyler.jpg"
+      },
+      {
+        "id": "roger",
+        "name": "Roger Albino",
+        "email": "roger.albino.i@gmail.com",
+        "avatarURL": "http://rogeralbino.com.br/images/roger-albino-desenvolvedor-front-end_og.jpg"
       }
     ]
   }

@@ -25,7 +25,7 @@ class ListContacts extends Component {
     }
 
     render() {
-        const {contacts, removeContact} = this.props
+        const {contacts, removeContact, onNavigate} = this.props
         const {query} = this.state
         let showingContacts
 
@@ -48,6 +48,9 @@ class ListContacts extends Component {
                            placeholder="Search contacts"
                            value={query}
                            onChange={e => this.updateQuery(e.target.value)} />
+                    <a href="#create"
+                       onClick={() => {onNavigate()}}
+                       className="add-contact">Add contact</a>
                 </div>
 
                 { showingContacts.length !== contacts.length
